@@ -1,0 +1,6 @@
+/* Minimal styling - not used by main window (loads SoundCloud directly) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

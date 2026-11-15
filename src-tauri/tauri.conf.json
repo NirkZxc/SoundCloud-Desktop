@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "SoundCloud Desktop",
+  "version": "1.0.0",
+  "identifier": "com.soundcloud.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "settings",
+        "title": "Settings - SoundCloud Desktop",
+        "url": "settings.html",
+        "width": 480,
+        "height": 520,
+        "minWidth": 440,
+        "minHeight": 480,
+        "resizable": false,
+        "decorations": true,
+        "center": true,
+        "dataDirectory": "%APPDATA%/SoundCloud-Desktop",
+        "visible": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' https://soundcloud.com https://*.soundcloud.com; script-src 'self' https://soundcloud.com https://*.soundcloud.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' https://soundcloud.com https://*.soundcloud.com 'unsafe-inline'; img-src 'self' https://soundcloud.com https://*.soundcloud.com data: blob:; font-src 'self' https://soundcloud.com https://*.soundcloud.com data:; connect-src 'self' https://soundcloud.com https://*.soundcloud.com wss://*.soundcloud.com; frame-src https://soundcloud.com https://*.soundcloud.com; media-src https://soundcloud.com https://*.soundcloud.com;"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper"
+      }
+    }
+  },
+  "plugins": {
+    "opener": {}
+  }
+}
