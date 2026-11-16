@@ -1,6 +1,6 @@
 [package]
 name = "soundcloud-desktop"
-version = "1.0.0"
+version = "1.0.1"
 description = "A minimal desktop client for SoundCloud"
 authors = ["SoundCloud Desktop Team"]
 edition = "2021"
